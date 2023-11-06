@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("./fonts/Nunito-Light.woff2") format("woff2"),
+    url("./fonts/Nunito-Light.woff") format("woff"),
+    url("./fonts/Nunito-Light.ttf") format("truetype"),
+    url("./fonts/Nunito-Light.svg#Nunito-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("./fonts/Nunito-Regular.woff2") format("woff2"),
+    url("./fonts/Nunito-Regular.woff") format("woff"),
+    url("./fonts/Nunito-Regular.ttf") format("truetype"),
+    url("./fonts/Nunito-Regular.svg#Nunito-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant-Bold";
+  src: url("./fonts/CormorantGaramond-Bold.woff2") format("woff2"),
+    url("./fonts/CormorantGaramond-Bold.woff") format("woff"),
+    url("./fonts/CormorantGaramond-Bold.ttf") format("truetype"),
+    url("./fonts/CormorantGaramond-Bold.svg#CormorantGaramond-Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant-Regular";
+  src: url("./fonts/CormorantGaramond-Regular.woff2") format("woff2"),
+    url("./fonts/CormorantGaramond-Regular.woff") format("woff"),
+    url("./fonts/CormorantGaramond-Regular.ttf") format("truetype"),
+    url("./fonts/CormorantGaramond-Regular.svg#CormorantGaramond-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Russo-One-Regular";
+  src: url("./fonts/RussoOne-Regular.woff2") format("woff2"),
+    url("./fonts/RussoOne-Regular.woff") format("woff"),
+    url("./fonts/RussoOne-Regular.ttf") format("truetype"),
+    url("./fonts/RussoOne-Regular.svg#RussoOne-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

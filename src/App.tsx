@@ -1,7 +1,14 @@
-import "./App.css";
+import css from "./App.module.css";
 
-function App() {
-  return <h1>MobiHelp24</h1>;
-}
+const App = () => {
+  return (
+    <h1 className={css.title}>
+      MobiHelp24
+      <p>
+        принимая во внимание, что пренебрежение и презрение к правам человека
+      </p>
+    </h1>
+  );
+};
 
 export default App;
