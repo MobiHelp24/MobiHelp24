@@ -1,13 +1,15 @@
+import { FC } from "react";
 import css from "./App.module.css";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
-const App = () => {
+const App: FC = () => {
   return (
-    <h1 className={css.title}>
-      MobiHelp24
-      <p>
-        принимая во внимание, что пренебрежение и презрение к правам человека
-      </p>
-    </h1>
+    <div className={css.container}>
+      <Header />
+      <h1 className={css.title}>MobiHelp24</h1>
+      <Hero />
+    </div>
   );
 };
 
