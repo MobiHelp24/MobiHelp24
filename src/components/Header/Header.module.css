@@ -5,6 +5,9 @@
   background-position: center;
   background-image: url("../450.jpg");
 }
+.container_header {
+  padding-top: 2rem;
+}
 @media screen and (min-width: 449px) and (max-width: 799px) {
   .header {
     height: 70vh;
@@ -35,7 +38,22 @@
     background-image: url("../1600.jpg");
   }
 }
+.work_time {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.address {
+  display: flex;
+  align-items: center;
+  /* gap: 0.4rem; */
+}
 .contacts {
   display: flex;
+  gap: 0.4rem;
+}
+.phone {
+  display: flex;
   flex-direction: column;
+  gap: 0.2rem;
 }
