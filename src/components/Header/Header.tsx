@@ -9,22 +9,24 @@ const Header: FC = () => {
     <header className={css.header}>
       <a>Logo</a>
       <div>
-        <TfiTime />
+        <TfiTime size="1.5rem" />
         <span>ПН-ПТ 8:00 - 17:00</span>
       </div>
       <div className={css.contacts}>
         <span>
-          <CiLocationOn />
-          адрес потом допишим
+          <CiLocationOn size="1.9rem" />
+          м.Павлоград вул. Соборна 93/3
         </span>
-        <a href="tel:+380961111111">+38 096 111 11 11</a>
+        Телефон
+        <a href="tel:+380958269769">+38 (095) 826-97-69</a>
+        <a href="tel:+380996660769">+38 (099) 666-07-69</a>
       </div>
       <div className={css.social_media}>
         <a href="#">
-          <PiInstagramLogoThin />
+          <PiInstagramLogoThin size="3rem" />
         </a>
         <a href="#">
-          <PiTelegramLogoThin />
+          <PiTelegramLogoThin size="3rem" />
         </a>
       </div>
     </header>

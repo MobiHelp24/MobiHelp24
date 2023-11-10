@@ -6,11 +6,13 @@ import Reviews from "./components/reviews/Reviews";
 
 const App: FC = () => {
   return (
-    <div className={css.container}>
+    <div>
       <Header />
-      <h1 className={css.title}>MobiHelp24</h1>
-      <Hero />
-      <Reviews />
+      <div className={css.container}>
+        <h1 className={css.title}>MobiHelp24</h1>
+        <Hero />
+        <Reviews />
+      </div>
     </div>
   );
 };
