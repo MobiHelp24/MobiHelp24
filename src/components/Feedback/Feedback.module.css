@@ -1,33 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 
 .reviewsContainer {
-  max-width: calc(var(--index) * 40);
-  width: 80%;
-  margin: calc(var(--index) * 2.5) auto 0;
+  /* margin: calc(var(--index) * 2.5) auto 0; */
+  /* max-width: calc(var(--index) * 40); */
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .reviewContainer {
   width: 90%;
-  margin: 5px calc(var(--index) * 1) auto;
+  /* margin: 5px calc(var(--index) * 1) auto; */
 }
 
-#reviewName {
-  width: calc(var(--index) * 10);
-  font-size: calc(var(--index) * 0.7);
+.reviewName {
+  /* width: calc(var(--index) * 10); */
+  /* font-size: calc(var(--index) * 0.7); */
+  font-size: 1.2rem;
   font-weight: 500;
   font-family: "Kaushan Script", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .reviewBody {
-  width: 100%;
+  width: 85%;
   margin: 10px auto 30px;
-  padding: calc(var(--index) * 1);
+  /* padding: calc(var(--index) * 1); */
   background-color: #fffff3;
   border-radius: 30px;
-  font-size: calc(var(--index) * 1);
+  /* font-size: calc(var(--index) * 1); */
+  font-size: 1.3rem;
   font-family: "Marck Script", cursive;
-  text-indent: calc(var(--index) * 1.3);
+  /* text-indent: calc(var(--index) * 1.3); */
+  text-indent: 1rem;
   text-align: justify;
 }
