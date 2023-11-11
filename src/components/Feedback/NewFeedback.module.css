@@ -1,0 +1,41 @@
+.reviewsContainer {
+  /* max-width: calc(var(--index) * 40); */
+  width: 80%;
+  /* margin: calc(var(--index) * 2.5) auto 0; */
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewForm {
+  margin: 0 0 20px;
+}
+
+.inputReview {
+  margin: 20px;
+  margin-bottom: 0;
+  /* width: calc(var(--index) * 20); */
+  /* height: calc(var(--index) * 5); */
+  text-align: start;
+}
+
+.reviewButton {
+  width: 25%;
+  margin: 5px calc(var(--index) * 11);
+  cursor: pointer;
+  background-color: transparent;
+  color: #f24a00;
+  border: #f24a00 solid 1px;
+  border-radius: calc(var(--index));
+  padding: calc(var(--index) * 0.2) 0;
+  font-size: calc(var(--index) * 0.6);
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+.reviewButton:hover {
+  background-color: #fefef7;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.reviewButton:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
