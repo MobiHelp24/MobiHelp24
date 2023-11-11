@@ -7,8 +7,10 @@ import NewFeedback from "./components/Feedback/NewFeedback";
 
 const App: FC = () => {
   return (
-    <div className={css.container}>
+    <div>
       <Header />
+
+    <div className={css.container}>
       <h1 className={css.title}>MobiHelp24</h1>
       <Hero />
       {/* <Reviews /> */}
@@ -16,7 +18,8 @@ const App: FC = () => {
       <Feedback />
       <hr />
       <NewFeedback />
-    </div>
+      </div>
+      </div>
   );
 };
 
