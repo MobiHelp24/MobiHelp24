@@ -2,7 +2,7 @@ import { FC } from "react";
 import css from "./App.module.css";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Reviews from "./components/reviews/Reviews";
+import Feedback from "./components/Feedback/Feedback";
 
 const App: FC = () => {
   return (
@@ -10,7 +10,9 @@ const App: FC = () => {
       <Header />
       <h1 className={css.title}>MobiHelp24</h1>
       <Hero />
-      <Reviews />
+      <hr />
+      <Feedback />
+      <hr />
     </div>
   );
 };
