@@ -3,7 +3,7 @@ import css from "./Hero.module.css";
 
 const Hero: FC = () => {
   return (
-    <div className={css.hero}>
+    <div className={`${css.hero} container`}>
       <div className={css.main_hero}>
         <div className={css.cards_container}>
           <ul className={css.list_cards}>

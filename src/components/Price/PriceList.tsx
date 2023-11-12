@@ -23,8 +23,8 @@ export default function PriceList(): JSX.Element {
   const [editDescription, setEditDescription] = useState("");
   const [price, setPrice] = useState("");
   const [editPrice, setEditPrice] = useState("");
-  const q = query(collection(db, "price"), orderBy("description", "asc"));
   useEffect(() => {
+    const q = query(collection(db, "price"), orderBy("description", "asc"));
     onSnapshot(q, (snapshot) => {
       setPriceList(
         snapshot.docs.map((document: DocumentData) => ({
@@ -33,7 +33,7 @@ export default function PriceList(): JSX.Element {
         }))
       );
     });
-  }, [description, q]);
+  }, []);
 
   const addPrice = (e: React.SyntheticEvent): void => {
     e.preventDefault();

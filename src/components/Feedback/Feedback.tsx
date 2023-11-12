@@ -25,8 +25,10 @@ import {
 
 const Feedback: FC = () => {
   const [reviews, setReviews] = useState<DocumentData[]>([]);
-  const q = query(collection(db, "reviews"), orderBy("timestamp", "desc"));
+
+  console.log("🚀  reviews:", reviews);
   useEffect(() => {
+    const q = query(collection(db, "reviews"), orderBy("timestamp", "desc"));
     onSnapshot(q, (snapshot) => {
       setReviews(
         snapshot.docs.map((document: DocumentData) => ({
@@ -35,7 +37,7 @@ const Feedback: FC = () => {
         }))
       );
     });
-  }, [q]);
+  }, []);
 
   return (
     <>
@@ -53,11 +55,11 @@ const Feedback: FC = () => {
       {reviews?.length > 0 && (
         <Swiper
           spaceBetween={30}
-          // effect={"slide"}
-          effect={"coverflow"}
+          effect={"slide"}
+          // effect={"coverflow"}
           navigation={true}
           autoplay={{
-            delay: 5000,
+            delay: 7000,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
           }}

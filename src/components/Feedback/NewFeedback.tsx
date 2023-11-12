@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-} from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { TextField } from "@mui/material";
 import styles from "./NewFeedback.module.css";
@@ -27,12 +23,18 @@ export default function NewFeedback(): JSX.Element {
   };
 
   async function getImgLinkFetch() {
-    setImgLink("https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg");
+    setImgLink(
+      "https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg"
+    );
   }
 
   return (
     <div className={styles.reviewsContainer}>
-      <form onSubmit={addReview} name="add_review" className={styles.reviewForm}>
+      <form
+        onSubmit={addReview}
+        name="add_review"
+        className={styles.reviewForm}
+      >
         <TextField
           required
           id="reviewName"
@@ -54,7 +56,13 @@ export default function NewFeedback(): JSX.Element {
           Add review
         </button>
       </form>
-      
     </div>
   );
 }
+// import { FC } from "react";
+
+// const NewFeedback: FC = () => {
+//   return <div></div>;
+// };
+
+// export default NewFeedback;

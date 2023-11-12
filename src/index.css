@@ -49,3 +49,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+.css-rppfq7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: var(--blue) !important;
+  color: var(--white) !important;
+}
