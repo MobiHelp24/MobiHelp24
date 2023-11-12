@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Feedback from "./components/Feedback/Feedback";
 import NewFeedback from "./components/Feedback/NewFeedback";
+import PriceList from "./components/Price/PriceList";
 
 const App: FC = () => {
   return (
@@ -17,6 +18,8 @@ const App: FC = () => {
         <Feedback />
         <hr />
         <NewFeedback />
+        <hr />
+        <PriceList />
       </div>
     </div>
   );
