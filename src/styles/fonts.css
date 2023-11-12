@@ -20,18 +20,6 @@
 }
 
 @font-face {
-  font-family: "Cormorant-Bold";
-  src: url("./fonts/CormorantGaramond-Bold.woff2") format("woff2"),
-    url("./fonts/CormorantGaramond-Bold.woff") format("woff"),
-    url("./fonts/CormorantGaramond-Bold.ttf") format("truetype"),
-    url("./fonts/CormorantGaramond-Bold.svg#CormorantGaramond-Bold")
-      format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Cormorant-Regular";
   src: url("./fonts/CormorantGaramond-Regular.woff2") format("woff2"),
     url("./fonts/CormorantGaramond-Regular.woff") format("woff"),
@@ -49,6 +37,42 @@
     url("./fonts/RussoOne-Regular.ttf") format("truetype"),
     url("./fonts/RussoOne-Regular.svg#RussoOne-Regular") format("svg");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito-Condensed";
+  src: local("Nunito Sans 7pt Condensed Black"),
+    local("NunitoSans7ptCondensed-Black"),
+    url("./fonts/NunitoSans7ptCondensed-Black.woff2") format("woff2"),
+    url("./fonts/NunitoSans7ptCondensed-Black.woff") format("woff"),
+    url("./fonts/NunitoSans7ptCondensed-Black.ttf") format("truetype"),
+    url("./fonts/NunitoSans7ptCondensed-Black.svg#NunitoSans7ptCondensed-Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poiret";
+  src: local("Poiret One"), local("PoiretOne-Regular"),
+    url("./fonts/PoiretOne-Regular.woff2") format("woff2"),
+    url("./fonts/PoiretOne-Regular.woff") format("woff"),
+    url("./fonts/PoiretOne-Regular.ttf") format("truetype"),
+    url("./fonts/PoiretOne-Regular.svg#PoiretOne-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: local("Unbounded Bold"), local("Unbounded-Bold"),
+    url("./fonts/Unbounded-Bold.woff2") format("woff2"),
+    url("./fonts/Unbounded-Bold.woff") format("woff"),
+    url("./fonts/Unbounded-Bold.ttf") format("truetype"),
+    url("./fonts/Unbounded-Bold.svg#Unbounded-Bold") format("svg");
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

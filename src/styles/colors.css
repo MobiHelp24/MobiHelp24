@@ -1,10 +1,12 @@
 :root {
-  --white: rgb(255, 253, 253);
-  --main-text-color: #3d433d;
+  --white: rgb(255, 255, 255);
+  --main-text-color: #242524;
   --red: #d21a1a;
-  --blue: #7fc8f8;
+  --blue: #2993d9;
   --seasalt: #f9f9f9;
   --yellow: #ffe45e;
   --b-radius: 0.25rem;
+  --icons-header: #0df3dc;
+  --icons-social-hover: #f35d0d;
   --max-container: 75rem;
 }

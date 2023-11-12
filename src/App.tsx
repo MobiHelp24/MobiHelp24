@@ -10,7 +10,6 @@ const App: FC = () => {
     <div>
       <Header />
       <div className={css.container}>
-        <h1 className={css.title}>MobiHelp24</h1>
         <Hero />
         {/* <Reviews /> */}
         <hr />
