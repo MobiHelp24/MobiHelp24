@@ -26,9 +26,9 @@ const Header: FC = () => {
                     <span className={css.address}>
                       <IoLocationSharp className={css.header_icons} />
                       <div className={css.contacts}>
-                        <span className={css.header_title}>м.Павлоград </span>
+                        <span className={css.header_title}>м. Павлоград </span>
                         <span className={css.header_title}>
-                          вул.Соборна 93/3
+                          вул. Соборна 93/3
                         </span>
                       </div>
                     </span>
