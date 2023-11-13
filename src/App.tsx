@@ -8,7 +8,6 @@ import NewFeedback from "./components/Feedback/NewFeedback";
 
 import Video from "./components/Video/Video";
 import PriceList from "./components/Price/PriceList";
-// import { db } from "./api/firebase";
 
 const App: FC = () => {
   return (
