@@ -13,7 +13,7 @@ import {
 import { db } from "../../api/firebase";
 import { AiOutlineDelete } from "react-icons/ai";
 
-// import css from "./PriceList.module.css";
+import css from "./PriceList.module.css";
 
 export default function PriceList(): JSX.Element {
   const [priceList, setPriceList] = useState<DocumentData[]>([]);
@@ -52,14 +52,15 @@ export default function PriceList(): JSX.Element {
           type="text"
           value={description}
           required
-          placeholder="Enter description here.."
+          placeholder="назва послуги"
           onChange={(e) => setDescription(e.target.value)}
         />
+        {" "}
         <input
           type="number"
           value={price}
           required
-          placeholder="Enter price here.."
+          placeholder="вартість послуги"
           onChange={(e) => {
             const inputValue = e.target.value;
             if (/^\d*\.?\d*$/.test(inputValue)) {
@@ -67,14 +68,14 @@ export default function PriceList(): JSX.Element {
             }
           }}
         />
-        <button type="submit">Add to price list</button>
+        <button className={css.addPriceButton} type="submit">Створити запис</button>
       </form>
 
       <div>
         {priceList.map((el) => (
           <div key={el.id}>
             <button
-              title="Delete"
+              title="Видалити"
               className="deleteButton"
               type="button"
               onClick={() => {
@@ -100,7 +101,7 @@ export default function PriceList(): JSX.Element {
                     }
                   }}
                 />{" "}
-                <button onClick={() => setSelectedPrice(null)}>Cancel</button>{" "}
+                <button onClick={() => setSelectedPrice(null)}>Скасувати</button>{" "}
                 <button
                   onClick={() => {
                     updateDoc(doc(db, "price", el.id), {
@@ -111,7 +112,7 @@ export default function PriceList(): JSX.Element {
                     setSelectedPrice(null);
                   }}
                 >
-                  Save
+                  Зберегти
                 </button>
               </>
             ) : (
@@ -128,7 +129,7 @@ export default function PriceList(): JSX.Element {
                     setEditPrice(el.item.price);
                   }}
                 >
-                  Edit
+                  Редагувати
                 </button>
               </>
             )}
