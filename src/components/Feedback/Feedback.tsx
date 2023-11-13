@@ -43,6 +43,10 @@ const Feedback: FC = () => {
 
   return (
     <>
+      <div className={css.feedbackHeader}>
+        <img className={css.feedbackHeaderImg} src="/feedback.png" alt="feedback" />
+        <p className={css.feedbackHeaderText}>Ваші відгуки</p>
+ 
       {reviews?.length > 0 && (
         <Swiper
           spaceBetween={30}
@@ -75,6 +79,8 @@ const Feedback: FC = () => {
           ))}
         </Swiper>
       )}
+      <button className={css.reviewButton}>Залишити свій відгук </button>
+      </div>
     </>
   );
 };

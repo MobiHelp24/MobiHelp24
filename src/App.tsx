@@ -8,6 +8,7 @@ import NewFeedback from "./components/Feedback/NewFeedback";
 
 import Video from "./components/Video/Video";
 import PriceList from "./components/Price/PriceList";
+import PriceService from "./components/PriceService/PriceService";
 
 const App: FC = () => {
   return (
@@ -21,6 +22,8 @@ const App: FC = () => {
         <Feedback />
         <hr />
         <NewFeedback />
+        <br />
+        <PriceService />
         <hr />
         <PriceList />
       </div>
