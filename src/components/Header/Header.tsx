@@ -2,7 +2,8 @@ import { FC } from "react";
 import css from "./Header.module.css";
 import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-import { PiInstagramLogoThin, PiTelegramLogoThin } from "react-icons/pi";
+import { PiInstagramLogoThin } from "react-icons/pi";
+import { BiLogoTelegram } from "react-icons/bi";
 
 const Header: FC = () => {
   return (
@@ -53,7 +54,9 @@ const Header: FC = () => {
                   <PiInstagramLogoThin className={css.social_media_icon} />
                 </a>
                 <a href="https://t.me/Benya2320" target="_blank">
-                  <PiTelegramLogoThin className={css.social_media_icon} />
+                  <BiLogoTelegram
+                    className={` ${css.social_media_icon_telegram}`}
+                  />
                 </a>
               </div>
             </div>
