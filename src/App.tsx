@@ -8,7 +8,11 @@ import NewFeedback from "./components/Feedback/NewFeedback";
 
 import Video from "./components/Video/Video";
 import PriceList from "./components/Price/PriceList";
+
 import PriceService from "./components/PriceService/PriceService";
+
+import Statistics from "./components/Statistics/Statistics";
+
 
 const App: FC = () => {
   return (
@@ -18,6 +22,7 @@ const App: FC = () => {
       <Video />
       <div className={css.container}>
         {/* <Reviews /> */}
+        <Statistics />
         <hr />
         <Feedback />
         <hr />
