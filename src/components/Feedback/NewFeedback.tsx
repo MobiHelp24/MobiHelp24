@@ -2,67 +2,95 @@ import React, { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { TextField } from "@mui/material";
-import styles from "./NewFeedback.module.css";
+import css from "./NewFeedback.module.css";
+
+import Rating from "@mui/material/Rating";
+import Box from "@mui/material/Box";
+import StarIcon from "@mui/icons-material/Star";
+
+const labels: { [index: string]: string } = {
+  0: "Без оцінки",
+  1: "Дуже погано",
+  2: "Погано",
+  3: "Середньо",
+  4: "Добре",
+  5: "Відмінно!",
+};
+
+function getLabelText(value: number) {
+  return `${value} Star${value !== 1 ? "s" : ""}, ${labels[value]}`;
+}
 
 export default function NewFeedback(): JSX.Element {
   const [inputName, setInputName] = useState("");
   const [inputReview, setInputReview] = useState("");
-  const [imgLink, setImgLink] = useState("");
+  const [inputRating, setInputRating] = useState<number | null>(0);
+  const [hover, setHover] = useState(-1);
 
   const addReview = (e: React.SyntheticEvent): void => {
     e.preventDefault();
-    getImgLinkFetch();
     addDoc(collection(db, "reviews"), {
       review: inputReview,
       name: inputName,
-      link: imgLink,
+      rating: inputRating,
       timestamp: serverTimestamp(),
     });
     setInputName("");
     setInputReview("");
+    setInputRating(0);
   };
 
-  async function getImgLinkFetch() {
-    setImgLink(
-      "https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg"
-    );
-  }
-
   return (
-    <div className={styles.reviewsContainer}>
-      <form
-        onSubmit={addReview}
-        name="add_review"
-        className={styles.reviewForm}
-      >
+    <div className={css.reviewsContainer}>
+      <form onSubmit={addReview} name="add_review" className={css.reviewForm}>
         <TextField
+          className={css.inputName}
           required
           id="reviewName"
           value={inputName}
-          label="Tell us about yourself"
+          maxRows={1}
+          label="Розкажіть про себе"
           variant="standard"
           onChange={(e) => setInputName(e.target.value)}
         />
-        <br />
+
+        <div className={css.inputRating}>
+          <p>Оцініть нашу співпрацю</p>
+          <Rating
+            name="hover-feedback"
+            value={inputRating}
+            precision={1}
+            getLabelText={getLabelText}
+            onChange={(_, newValue) => {
+              setInputRating(newValue);
+            }}
+            onChangeActive={(_, newHover) => {
+              setHover(newHover);
+            }}
+            emptyIcon={
+              <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+            }
+          />
+          {inputRating !== null && (
+            <Box sx={{ ml: 2 }}>
+              {labels[hover !== -1 ? hover : inputRating]}
+            </Box>
+          )}
+        </div>
+
         <textarea
-          className={styles.inputReview}
+          className={css.inputReview}
           required
-          placeholder="Leave your review here.."
+          placeholder="Залиште Ваш відгук"
+          maxLength={300}
           onChange={(e) => setInputReview(e.target.value)}
           value={inputReview}
         />
         <br />
-        <button className={styles.reviewButton} type="submit">
-          Add review
+        <button className={css.reviewButton} type="submit">
+          Відправити
         </button>
       </form>
     </div>
   );
 }
-// import { FC } from "react";
-
-// const NewFeedback: FC = () => {
-//   return <div></div>;
-// };
-
-// export default NewFeedback;

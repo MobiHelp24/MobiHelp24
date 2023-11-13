@@ -16,6 +16,8 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Rating from "@mui/material/Rating";
+
 import {
   Autoplay,
   EffectCoverflow,
@@ -41,22 +43,10 @@ const Feedback: FC = () => {
 
   return (
     <>
-      {/* <div className={styles.reviewsContainer}>
-        <div className={styles.reviewListContainer}>
-          {reviews.map((el) => (
-            <div key={el.id} className={styles.reviewContainer}>
-              <p className={styles.reviewName}>{el.item.name}</p>
-              <div className={styles.reviewBody}>{el.item.review}</div>
-            </div>
-          ))}
-        </div>
-      </div> */}
-
       {reviews?.length > 0 && (
         <Swiper
           spaceBetween={30}
           effect={"slide"}
-          // effect={"coverflow"}
           navigation={true}
           autoplay={{
             delay: 7000,
@@ -78,6 +68,7 @@ const Feedback: FC = () => {
             >
               <div className={css.reviewsContainer}>
                 <p className={css.reviewName}>{el.item.name}</p>
+                <Rating name="read-only" value={el.item.rating} readOnly />
                 <div className={css.reviewBody}>{el.item.review}</div>
               </div>
             </SwiperSlide>
