@@ -73,7 +73,6 @@
 .info {
   display: inline-block;
   margin-top: 1rem;
-  /* margin-left: 12%; */
   column-gap: 0.6rem;
 }
 .work_time {
@@ -113,9 +112,7 @@
 }
 .header_icons {
   font-size: 1.8rem;
-
   color: var(--white);
-  /* color: var(--icons-header); */
 }
 
 .social_media {

@@ -1,5 +1,6 @@
 .video {
-  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
   padding: 0.6251rem 0rem;
   background-image: linear-gradient(
     0deg,
@@ -26,23 +27,59 @@
 }
 .cards_list {
   margin: 0rem 1rem;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 .card_video {
   border-radius: var(--b-radius);
 }
 .youtube {
-  min-width: 260px;
-  min-height: 144px;
+  width: 230px;
+  height: 114px;
   border: none;
   box-shadow: 0px 0px 10px 1px rgba(14, 156, 230, 0.45);
   border-radius: var(--b-radius);
+}
+.video_list_title {
+  font-size: 0.7rem;
 }
 .pagination {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+@media screen and (min-width: 560px) {
+  .cards_list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .youtube {
+    width: 230px;
+    height: 114px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .youtube {
+    min-width: 260px;
+    min-height: 144px;
+  }
+  .video_list_title {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .youtube {
+    min-width: 320px;
+    min-height: 184px;
+  }
+  .video_list_title {
+    font-size: 1rem;
+  }
+  .cards_list {
+    gap: 2rem;
+  }
 }

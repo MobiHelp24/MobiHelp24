@@ -17,7 +17,7 @@ const CountUpAnimation = ({ endValue }: IStat) => {
 
   return (
     <animated.span ref={ref} className={css.circle}>
-      {number.interpolate((val) => Math.floor(val))}
+      {number.to((val) => Math.floor(val))}
     </animated.span>
   );
 };

@@ -21,7 +21,7 @@ const AnimatedCounter: React.FC<IProcent> = ({ value }) => {
     <animated.span
       ref={ref}
       className={css.card_line}
-      style={{ width: number.interpolate((val) => `${val.toFixed(2)}%`) }}
+      style={{ width: number.to((val) => `${val.toFixed(2)}%`) }}
     />
   );
 };

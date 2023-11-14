@@ -9,11 +9,13 @@ import {
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { Pagination } from "@mui/material";
+import { useMediaQuery } from "react-responsive";
 
 const Video: FC = () => {
   const [videoLinks, setVideoLinks] = useState<DocumentData[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsOnPage = 3;
+  const isDesktop = useMediaQuery({ minWidth: 560 });
+  const itemsOnPage = isDesktop ? 4 : 3;
   const startIdx = (currentPage - 1) * itemsOnPage;
   const endIdx = startIdx + itemsOnPage;
 
@@ -52,7 +54,7 @@ const Video: FC = () => {
                       title={item.description}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     ></iframe>
-                    <p>
+                    <p className={css.video_list_title}>
                       {item.description.length > 36
                         ? `${item.description.substring(0, 36)}...`
                         : item.description}
