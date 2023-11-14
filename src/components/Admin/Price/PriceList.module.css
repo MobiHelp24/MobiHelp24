@@ -19,3 +19,15 @@
 .addPriceButton:active {
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
+
+.deleteButton {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.deleteButton:hover {
+  color: red;
+}
