@@ -1,4 +1,4 @@
-.addPriceButton {
+.addButton {
   width: 25%;
   margin-left: 1rem;
   cursor: pointer;
@@ -11,12 +11,12 @@
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
 
-.addPriceButton:hover {
+.addButton:hover {
   background-color: #fefef7;
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
 }
 
-.addPriceButton:active {
+.addButton:active {
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
 
@@ -25,19 +25,11 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .deleteButton:hover {
   color: red;
-}
-
-.editUsdRate{
-  width: 5rem;
-}
-
-.rateText{
-  margin-bottom: 2rem;
 }
 
 .descriptionInput{
@@ -46,7 +38,7 @@
   margin-right: 0.2rem;
 }
 
-.priceInput{
+.linkInput{
   padding: 0.2rem;
-  width: 7rem;
+  width: 15rem;
 }

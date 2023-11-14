@@ -1,0 +1,22 @@
+.deleteButton {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+.feedbackText{
+  font-size: 1.2rem;
+}
+
+.reviewName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Kaushan Script", cursive;
+  margin-left: 0.5rem;
+}
