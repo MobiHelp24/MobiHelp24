@@ -1,0 +1,41 @@
+.statistic {
+  margin: 3.5rem;
+}
+.statistic_title {
+  display: flex;
+  justify-content: center;
+  font-family: "Poiret";
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.cards_list {
+  margin: 0rem 1rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card_title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+.card_line {
+  height: 0.8rem;
+  background-color: var(--stastistics);
+
+  border-radius: var(--b-radius);
+}
+.card_number {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+}
