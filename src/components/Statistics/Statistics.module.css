@@ -1,18 +1,13 @@
-.statistic {
-  margin: 3.5rem;
-}
 .statistic_title {
   display: flex;
   justify-content: center;
   font-family: "Poiret";
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 .cards_list {
   margin: 0rem 1rem;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 .card {
@@ -23,6 +18,7 @@
 .card_title {
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
@@ -37,5 +33,15 @@
   justify-content: center;
   margin-top: 0.2rem;
   margin-bottom: 1.2rem;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .cards_list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .statistic_title {
+    font-size: 2.5rem;
+  }
 }

@@ -1,0 +1,162 @@
+.footer {
+  padding: 1.7rem 0rem;
+  background-color: rgb(34, 56, 69);
+}
+.main_footer_title {
+  font-family: "Poiret";
+  font-size: 1.2rem;
+  color: var(--white);
+  text-align: center;
+
+  margin-bottom: 1.5rem;
+}
+.logo_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.7rem;
+}
+.logo {
+  font-family: "Nunito-Condensed";
+  display: inline-block;
+  font-size: 2.5rem;
+  letter-spacing: 0.05rem;
+  font-weight: 900;
+  padding: 0.1rem 0.8rem;
+  border-radius: 0.6rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border: 0.2rem solid var(--white);
+}
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.work_time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+}
+.address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer_title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--white);
+}
+.footer_icons {
+  font-size: 1.8rem;
+  color: var(--blue);
+}
+.social_media {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.social_media_icon,
+.social_media_icon_telegram {
+  padding: 0.2rem;
+  background-color: var(--blue);
+  border-radius: 0.6rem;
+  border: 0.2rem solid var(--white);
+
+  font-size: 3rem;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out,
+    box-shadow 250ms ease-in-out, border 250ms ease-in-out;
+  color: var(--black);
+}
+.social_media_icon:hover {
+  color: var(--white);
+  background-image: linear-gradient(
+    225deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 11%,
+    hsl(315deg 100% 27%) 22%,
+    hsl(329deg 100% 36%) 33%,
+    hsl(337deg 100% 43%) 44%,
+    hsl(357deg 91% 59%) 56%,
+    hsl(17deg 100% 59%) 67%,
+    hsl(34deg 100% 53%) 78%,
+    hsl(45deg 100% 50%) 89%,
+    hsl(55deg 100% 50%) 100%
+  );
+  box-shadow: 0px 0px 8px 2px rgba(239, 240, 242, 0.75);
+  border: none;
+}
+.social_media_icon_telegram:hover {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0px 0px 8px 2px rgba(239, 240, 242, 0.75);
+  border: none;
+}
+
+@media screen and (min-width: 700px) {
+  .footer_info {
+    flex-direction: unset;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  .main_footer_title {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer_title {
+    font-size: 1.2rem;
+  }
+  .social_media {
+    flex-direction: unset;
+    gap: 0.7rem;
+  }
+  .contacts {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main_footer_title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  .logo {
+    font-size: 2.4rem;
+    letter-spacing: 0.05rem;
+    font-weight: 900;
+    padding: 1rem 1.8rem;
+    border-radius: 1.6rem;
+    border: 0.5rem solid var(--white);
+  }
+  .footer_title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main_footer_title {
+    margin-bottom: 2.5rem;
+  }
+  .container_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .social_media {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .footer_info {
+    flex-direction: unset;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .footer_title {
+    font-size: 1.5rem;
+  }
+}

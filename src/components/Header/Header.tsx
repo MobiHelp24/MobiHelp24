@@ -12,7 +12,7 @@ const Header: FC = () => {
         <div className={`${css.container_header} container`}>
           <div className={css.main_container}>
             <div className={css.logo_container}>
-              <a className={css.logo}>MobiHelp24</a>
+              <span className={css.logo}>MobiHelp24</span>
             </div>
 
             <div className={css.info}>

@@ -4,7 +4,7 @@ import CountUpAnimation from "./CountUpAnimation";
 import AnimatedCounter from "./AnimatedCounter";
 
 const Statistics: FC = () => {
-  const one = 5043;
+  const one = 8043;
   const two = 7404;
   const tree = 4528;
   const four = 11634;

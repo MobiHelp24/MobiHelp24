@@ -49,3 +49,7 @@
   border: none;
   border-radius: 0.5rem;
 }
+.title_icon {
+  width: 3rem;
+  height: 3rem;
+}
