@@ -53,3 +53,35 @@ img {
   background-color: var(--blue) !important;
   color: var(--white) !important;
 }
+
+.btnOk{
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #2993d960;
+}
+
+.btnOk:hover{
+  background-color: var(--blue);
+  color: var(--seasalt);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.btnOk:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+
+.btnCancel{
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #d21a1a82;
+}
+
+.btnCancel:hover{
+  background-color: var(--red);
+  color: var(--seasalt);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.btnCancel:active {
+  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}

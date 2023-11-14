@@ -60,14 +60,16 @@ export default function PriceList(): JSX.Element {
 
   return (
     <>
-      <div>
+      <div className={css.rateText}>
         {usdRates.map((el) => (
           <div key={el.id}>
             {selectedUsdRate === el.id ? (
               <>
+                <span> Курс USD: </span>
                 <input
                   type="number"
                   value={editUsdRate}
+                  className={css.editUsdRate}
                   onChange={(e) => {
                     const inputValue = e.target.value;
                     if (/^\d*\.?\d*$/.test(inputValue)) {
@@ -75,10 +77,14 @@ export default function PriceList(): JSX.Element {
                     }
                   }}
                 />{" "}
-                <button onClick={() => setSelectedUsdRate(null)}>
+                <button
+                  className="btnCancel"
+                  onClick={() => setSelectedUsdRate(null)}
+                >
                   Скасувати
                 </button>{" "}
                 <button
+                  className="btnOk"
                   onClick={() => {
                     updateDoc(doc(db, "usd", el.id), {
                       usd: editUsdRate,
@@ -91,12 +97,12 @@ export default function PriceList(): JSX.Element {
                 </button>
               </>
             ) : (
-              <>
+              <div className={css.rateText}>
                 <span> Курс USD: </span>
                 <span>{el.item.usd} грн.</span>{" "}
                 <button
                   title="Змінити курс"
-                  className="editButton"
+                  className="btnOk"
                   type="button"
                   onClick={() => {
                     setSelectedUsdRate(el.id);
@@ -105,7 +111,7 @@ export default function PriceList(): JSX.Element {
                 >
                   Змінити курс
                 </button>
-              </>
+              </div>
             )}
           </div>
         ))}
@@ -113,17 +119,19 @@ export default function PriceList(): JSX.Element {
 
       <form onSubmit={addPrice} name="add_price">
         <input
+          className={css.descriptionInput}
           type="text"
           value={description}
           required
           placeholder="назва послуги"
           onChange={(e) => setDescription(e.target.value)}
-        />{" "}
+        />
         <input
+          className={css.priceInput}
           type="number"
           value={price}
           required
-          placeholder="вартість послуги"
+          placeholder="вартість $"
           onChange={(e) => {
             const inputValue = e.target.value;
             if (/^\d*\.?\d*$/.test(inputValue)) {
@@ -135,7 +143,7 @@ export default function PriceList(): JSX.Element {
           Створити запис
         </button>
       </form>
-
+      <br />
       <div>
         {priceList.map((el) => (
           <div key={el.id}>
@@ -152,11 +160,13 @@ export default function PriceList(): JSX.Element {
             {selectedPrice === el.id ? (
               <>
                 <input
+                  className={css.descriptionInput}
                   type="text"
                   value={editDescription}
                   onChange={(e) => setEditDescription(e.target.value)}
                 />
                 <input
+                  className={css.priceInput}
                   type="number"
                   value={editPrice}
                   onChange={(e) => {
@@ -166,10 +176,14 @@ export default function PriceList(): JSX.Element {
                     }
                   }}
                 />{" "}
-                <button onClick={() => setSelectedPrice(null)}>
+                <button
+                  className="btnCancel"
+                  onClick={() => setSelectedPrice(null)}
+                >
                   Скасувати
                 </button>{" "}
                 <button
+                  className="btnOk"
                   onClick={() => {
                     updateDoc(doc(db, "price", el.id), {
                       description: editDescription,
@@ -181,12 +195,15 @@ export default function PriceList(): JSX.Element {
                 >
                   Зберегти
                 </button>
+                <hr />
               </>
             ) : (
               <>
-                <span>{el.item.description}</span>{" - "}
+                <span>{el.item.description}</span>
+                {" - "}
                 <span>{el.item.price}$</span>{" "}
                 <button
+                  className="btnOk"
                   title="Редагувати"
                   type="button"
                   onClick={() => {
@@ -197,6 +214,7 @@ export default function PriceList(): JSX.Element {
                 >
                   Редагувати
                 </button>
+                <hr />
               </>
             )}
           </div>
