@@ -5,12 +5,9 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Feedback from "./components/Feedback/Feedback";
 import NewFeedback from "./components/Feedback/NewFeedback";
-
 import Video from "./components/Video/Video";
-import PriceList from "./components/Price/PriceList";
-
+import PriceList from "./components/Admin/Price/PriceList";
 import PriceService from "./components/PriceService/PriceService";
-
 import Statistics from "./components/Statistics/Statistics";
 
 
