@@ -8,6 +8,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import css from "./Feedback.module.css";
+import feedbackImg from "/feedback.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -44,7 +45,7 @@ const Feedback: FC = () => {
   return (
     <>
       <div className={css.feedbackHeader}>
-        <img className={css.feedbackHeaderImg} src="/feedback.png" alt="feedback" />
+        <img className={css.feedbackHeaderImg} src={feedbackImg} alt="feedback" />
         <p className={css.feedbackHeaderText}>Ваші відгуки</p>
  
       {reviews?.length > 0 && (
