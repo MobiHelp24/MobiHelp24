@@ -86,7 +86,7 @@ const PriceService: FC = () => {
   return (
     <>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 700 }} aria-label="table">
+        <Table sx={{ minWidth: 220 }} aria-label="table">
           <TableHead>
             <TableRow>
               <StyledTableCell>
