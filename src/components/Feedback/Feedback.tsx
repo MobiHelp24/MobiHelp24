@@ -8,7 +8,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import css from "./Feedback.module.css";
-import feedbackImg from "/feedback.png";
+import feedbackImg from "../../../public/feedback.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
