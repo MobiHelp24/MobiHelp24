@@ -9,7 +9,6 @@ import Video from "./components/Video/Video";
 import PriceService from "./components/PriceService/PriceService";
 import AdminPage from "./components/Admin/AdminPage";
 import Statistics from "./components/Statistics/Statistics";
-import Footer from "./components/Footer/Footer";
 
 const App: FC = () => {
   return (
@@ -18,7 +17,6 @@ const App: FC = () => {
       <Hero />
       <Video />
       <div className={css.container}>
-        {/* <Reviews /> */}
         <Statistics />
         <hr />
         <Feedback />
@@ -29,7 +27,6 @@ const App: FC = () => {
         <hr />
         <AdminPage />
       </div>
-      <Footer />
     </div>
   );
 };
