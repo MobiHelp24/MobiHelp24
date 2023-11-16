@@ -1,8 +1,9 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { TextField } from "@mui/material";
 import css from "./NewFeedback.module.css";
+import { IoMdClose } from "react-icons/io";
 
 import Rating from "@mui/material/Rating";
 import Box from "@mui/material/Box";
@@ -24,7 +25,7 @@ interface IModal {
   setModalHide: (newValue: boolean) => void;
 }
 
-const NewFeedback = ({setModalHide}:IModal): JSX.Element => {
+const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
   const [inputName, setInputName] = useState("");
   const [inputReview, setInputReview] = useState("");
   const [inputRating, setInputRating] = useState<number | null>(0);
@@ -41,13 +42,20 @@ const NewFeedback = ({setModalHide}:IModal): JSX.Element => {
     setInputName("");
     setInputReview("");
     setInputRating(0);
-    setModalHide(false)
+    setModalHide(false);
   };
 
   return (
     <div className={css.reviewsContainer}>
+      <button
+        type="button"
+        className={css.btn_close}
+        onClick={() => setModalHide(false)}
+      >
+        <IoMdClose />
+      </button>
       <form onSubmit={addReview} name="add_review" className={css.reviewForm}>
-      <p className={css.rating_title} >Оцініть співпрацю</p>
+        <p className={css.rating_title}>Оцініть співпрацю</p>
         <TextField
           className={css.inputName}
           required
@@ -60,7 +68,6 @@ const NewFeedback = ({setModalHide}:IModal): JSX.Element => {
         />
 
         <div className={css.inputRating}>
-          
           <Rating
             name="hover-feedback"
             value={inputRating}
@@ -97,6 +104,6 @@ const NewFeedback = ({setModalHide}:IModal): JSX.Element => {
       </form>
     </div>
   );
-}
+};
 
 export default NewFeedback;

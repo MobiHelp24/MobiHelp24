@@ -1,4 +1,5 @@
 .reviewsContainer {
+  position: relative;
   width: calc(80vw - 20px);
   height: calc(50vh - 20px);
   display: flex;
@@ -6,6 +7,17 @@
   background-color: var(--white);
   border-radius: var(--b-radius);
   z-index: 20;
+}
+.btn_close {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 1rem;
+  background: transparent;
+  padding: 0.4rem;
+}
+.btn_close:hover {
+  color: var(--red);
 }
 
 .reviewForm {
@@ -16,18 +28,18 @@
   width: 95%;
 }
 
-.inputName{
+.inputName {
   width: 70%;
 }
-.rating_title{
+.rating_title {
   text-align: center;
   margin-bottom: 0.2rem;
 }
 
-.inputRating{
-      display: flex;
-    flex-direction: column;
-    align-items: center;
+.inputRating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-top: 1rem;
 }
@@ -42,11 +54,11 @@
 }
 
 .reviewButton {
-  padding: 0.4rem 1rem ;
+  padding: 0.4rem 1rem;
   background-color: var(--blue);
-  color: var(--white); 
+  color: var(--white);
   border-radius: 1.4rem;
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out ;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
   font-size: calc(var(--index) * 0.6);
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
@@ -63,16 +75,16 @@
 
 @media screen and (min-width: 700px) {
   .reviewButton {
-  padding: 0.6rem 1.3rem ;
+    padding: 0.6rem 1.3rem;
+  }
+  .rating_title {
+    font-size: 1.2rem;
+  }
+  .btn_close {
+    font-size: 1.3rem;
+  }
+  .reviewsContainer {
+    width: 550px;
+    height: 294px;
+  }
 }
-.rating_title{
-  font-size: 1.2rem;
-}
-}
-
-
-@media screen and (min-width: 700px) {
-.reviewsContainer {
-  width: 550px;
-  height: 294px;
-}}
