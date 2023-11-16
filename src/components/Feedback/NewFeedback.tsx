@@ -55,7 +55,6 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
         <IoMdClose />
       </button>
       <form onSubmit={addReview} name="add_review" className={css.reviewForm}>
-        <p className={css.rating_title}>Оцініть співпрацю</p>
         <TextField
           className={css.inputName}
           required
@@ -67,6 +66,7 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
           onChange={(e) => setInputName(e.target.value)}
         />
 
+        <p className={css.rating_title}>Оцініть нашу співпрацю</p>
         <div className={css.inputRating}>
           <Rating
             name="hover-feedback"
@@ -95,6 +95,7 @@ const NewFeedback = ({ setModalHide }: IModal): JSX.Element => {
           required
           placeholder="Залиште Ваш відгук"
           maxLength={300}
+          rows={4}
           onChange={(e) => setInputReview(e.target.value)}
           value={inputReview}
         />
