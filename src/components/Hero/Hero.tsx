@@ -4,6 +4,10 @@ import css from "./Hero.module.css";
 import Statistics from "../Statistics/Statistics";
 import Feedback from "../Feedback/Feedback";
 import PriceService from "../PriceService/PriceService";
+import likeImg from "/like.png";
+import toolsImg from "/tools.png";
+import mobileImg from "/mobile.png";
+
 
 const Hero: FC = () => {
   return (
@@ -13,14 +17,14 @@ const Hero: FC = () => {
         <div className={css.cards_container}>
           <ul className={css.list_cards}>
             <li className={css.cards}>
-              <img src="../like.png" className={css.title_icon} alt="like" />
+              <img src={likeImg} className={css.title_icon} alt="like" />
               <h3 className={css.cards_title}>Оригінальні запчастини</h3>
               <p className={css.small_title}>
                 Фірмові комплектуючі, від перевірених постачальників
               </p>
             </li>
             <li className={css.cards}>
-              <img src="../tools.png" className={css.title_icon} alt="tools" />
+              <img src={toolsImg} className={css.title_icon} alt="tools" />
               <h3 className={css.cards_title}>Терміновий ремонт</h3>
               <p className={css.small_title}>
                 У більшості випадків отримаєте телефон протягом того ж дня{" "}
@@ -29,7 +33,7 @@ const Hero: FC = () => {
           </ul>
           <ul className={css.list_cards_2}>
             <li className={css.cards}>
-              <img src="../mobile.png" className={css.title_icon} alt="phone" />
+              <img src={mobileImg} className={css.title_icon} alt="phone" />
               <h3 className={css.cards_title}>Гарантія роботи</h3>
               <p className={css.small_title}>
                 Ми гарантуємо 100% функціональність вашого пристрою після
