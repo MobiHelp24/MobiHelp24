@@ -1,8 +1,13 @@
 import { FC } from "react";
+import csss from "../../App.module.css";
 import css from "./Hero.module.css";
+import Statistics from "../Statistics/Statistics";
+import Feedback from "../Feedback/Feedback";
+import PriceService from "../PriceService/PriceService";
 
 const Hero: FC = () => {
   return (
+    <>
     <div className={`${css.hero} container`}>
       <div className={css.main_hero}>
         <div className={css.cards_container}>
@@ -41,6 +46,14 @@ const Hero: FC = () => {
         </div>
       </div>
     </div>
+      <div className={csss.container}>
+        <Statistics />
+        <hr />
+        <Feedback />
+        <PriceService />
+        
+      </div>
+      </>
   );
 };
 
