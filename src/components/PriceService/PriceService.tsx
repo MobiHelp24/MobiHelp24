@@ -18,7 +18,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
 
-// import css from "./PriceService.module.css";
+import css from "./PriceService.module.css";
 
 function createData(description: string, price: number) {
   return { description, price };
@@ -38,7 +38,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  // hide last border
   "&:last-child td, &:last-child th": {
     border: 0,
   },
@@ -65,7 +64,7 @@ const PriceService: FC = () => {
         id: document.id,
         item: document.data(),
       }));
-  
+
       if (usdData.length > 0) {
         usdRateRef.current = usdData[0].item.usd;
       }
@@ -85,6 +84,7 @@ const PriceService: FC = () => {
 
   return (
     <>
+      <h2 className={css.feedback}>Послуги</h2>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 220 }} aria-label="table">
           <TableHead>

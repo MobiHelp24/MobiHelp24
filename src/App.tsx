@@ -10,13 +10,10 @@ const App: FC = () => {
     <div>
       <Header />
       <Routes>
-      <Route path="/" element={<Hero />} />
-      <Route path="222" element={<AdminPage />} />
-    </Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="222" element={<AdminPage />} />
+      </Routes>
     </div>
-    
-    
-    
   );
 };
 

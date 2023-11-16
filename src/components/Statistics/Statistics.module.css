@@ -1,3 +1,7 @@
+.statistic {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 .statistic_title {
   display: flex;
   justify-content: center;
@@ -6,6 +10,7 @@
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 .cards_list {
   margin: 0rem 1rem;
   gap: 1.5rem;
