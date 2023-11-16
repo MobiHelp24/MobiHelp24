@@ -8,6 +8,7 @@ import likeImg from "/like.png";
 import toolsImg from "/tools.png";
 import mobileImg from "/mobile.png";
 import Footer from "../Footer/Footer";
+import Video from "../Video/Video";
 
 const Hero: FC = () => {
   return (
@@ -48,6 +49,9 @@ const Hero: FC = () => {
         <Feedback />
 
         <PriceService />
+      </div>
+      <Video />
+      <div className={csss.container}>
         <Statistics />
       </div>
       <Footer />
