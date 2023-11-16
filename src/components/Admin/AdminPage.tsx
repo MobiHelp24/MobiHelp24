@@ -8,6 +8,7 @@ import PriceList from "./Price/PriceList";
 import VideoAdmin from "./VideoAdmin/VideoAdmin";
 
 import css from "./AdminPage.module.css";
+import { Link } from "react-router-dom";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -48,7 +49,8 @@ export default function AdminPage() {
 
   return (
     <>
-      <div>
+      <div className="container">
+    <Link to="/" >Повернутись</Link>
           <Box
             sx={{
               maxWidth: { xs: 320, sm: "100%" },

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 
 .feedbackHeader{
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,23 +51,18 @@
 }
 
 .reviewButton {
-  width: 25%;
-  margin: 5px calc(var(--index) * 11);
-  cursor: pointer;
-  background-color: transparent;
-  color: #f24a00;
-  border: #f24a00 solid 1px;
-  border-radius: calc(var(--index));
-  padding: calc(var(--index) * 0.2) 0;
-  font-size: calc(var(--index) * 0.6);
-  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+  padding: 0.6rem 1.4rem ;
+  background-color: var(--blue);
+  margin-top: 1rem;
+  color: var(--white); 
+  border-radius: 1.4rem;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out ;
+font-size: 1.3rem;
+  box-shadow: 1px 1px 4px rgba(223, 127, 127, 0.3);
 }
 
 .reviewButton:hover {
-  background-color: #fefef7;
+  background-color: rgb(13, 171, 171);
+  color: var(--black);
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
-}
-
-.reviewButton:active {
-  box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }

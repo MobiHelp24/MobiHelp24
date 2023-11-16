@@ -1,50 +1,78 @@
 .reviewsContainer {
-  width: 100%;
+  width: calc(80vw - 20px);
+  height: calc(50vh - 20px);
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: var(--b-radius);
+  z-index: 20;
 }
 
 .reviewForm {
-  width: 80%;
-  margin: 0 0 2rem;  
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
 }
 
 .inputName{
   width: 70%;
 }
+.rating_title{
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
 
 .inputRating{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
   width: 100%;
   margin-top: 1rem;
 }
 
 .inputReview {
-  width: 80%;
+  padding: 0.5rem;
+  width: 100%;
   height: 7rem;
-  margin: 20px;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
   text-align: start;
+  resize: none;
 }
 
 .reviewButton {
-  width: 25%;
-  margin: 5px calc(var(--index) * 11);
-  cursor: pointer;
-  background-color: transparent;
-  color: #f24a00;
-  border: #f24a00 solid 1px;
-  border-radius: calc(var(--index));
-  padding: calc(var(--index) * 0.2) 0;
+  padding: 0.4rem 1rem ;
+  background-color: var(--blue);
+  color: var(--white); 
+  border-radius: 1.4rem;
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out ;
   font-size: calc(var(--index) * 0.6);
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
 
 .reviewButton:hover {
-  background-color: #fefef7;
+  background-color: rgb(13, 171, 171);
+  color: var(--black);
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
 }
 
 .reviewButton:active {
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
+
+@media screen and (min-width: 700px) {
+  .reviewButton {
+  padding: 0.6rem 1.3rem ;
+}
+.rating_title{
+  font-size: 1.2rem;
+}
+}
+
+
+@media screen and (min-width: 700px) {
+.reviewsContainer {
+  width: 550px;
+  height: 294px;
+}}

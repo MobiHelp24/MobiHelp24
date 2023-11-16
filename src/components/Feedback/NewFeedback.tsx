@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import {  useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../api/firebase";
 import { TextField } from "@mui/material";
@@ -20,8 +20,11 @@ const labels: { [index: string]: string } = {
 function getLabelText(value: number) {
   return `${value} Star${value !== 1 ? "s" : ""}, ${labels[value]}`;
 }
+interface IModal {
+  setModalHide: (newValue: boolean) => void;
+}
 
-export default function NewFeedback(): JSX.Element {
+const NewFeedback = ({setModalHide}:IModal): JSX.Element => {
   const [inputName, setInputName] = useState("");
   const [inputReview, setInputReview] = useState("");
   const [inputRating, setInputRating] = useState<number | null>(0);
@@ -38,24 +41,26 @@ export default function NewFeedback(): JSX.Element {
     setInputName("");
     setInputReview("");
     setInputRating(0);
+    setModalHide(false)
   };
 
   return (
     <div className={css.reviewsContainer}>
       <form onSubmit={addReview} name="add_review" className={css.reviewForm}>
+      <p className={css.rating_title} >Оцініть співпрацю</p>
         <TextField
           className={css.inputName}
           required
           id="reviewName"
           value={inputName}
           maxRows={1}
-          label="Розкажіть про себе"
+          label="Ваше Ім'я"
           variant="standard"
           onChange={(e) => setInputName(e.target.value)}
         />
 
         <div className={css.inputRating}>
-          <p>Оцініть нашу співпрацю</p>
+          
           <Rating
             name="hover-feedback"
             value={inputRating}
@@ -86,7 +91,6 @@ export default function NewFeedback(): JSX.Element {
           onChange={(e) => setInputReview(e.target.value)}
           value={inputReview}
         />
-        <br />
         <button className={css.reviewButton} type="submit">
           Відправити
         </button>
@@ -94,3 +98,5 @@ export default function NewFeedback(): JSX.Element {
     </div>
   );
 }
+
+export default NewFeedback;

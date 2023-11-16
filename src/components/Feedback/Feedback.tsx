@@ -25,11 +25,11 @@ import {
   Navigation,
   Pagination,
 } from "swiper/modules";
+import Modal from "../Modal/Modal";
 
 const Feedback: FC = () => {
+  const [isModalShow, setIsModalShow] = useState(false);
   const [reviews, setReviews] = useState<DocumentData[]>([]);
-
-  console.log("🚀  reviews:", reviews);
   useEffect(() => {
     const q = query(collection(db, "reviews"), orderBy("timestamp", "desc"));
     onSnapshot(q, (snapshot) => {
@@ -41,13 +41,16 @@ const Feedback: FC = () => {
       );
     });
   }, []);
+  const modalShow = () => {
+    setIsModalShow(true);
+  };
 
   return (
     <>
       <div className={css.feedbackHeader}>
+
         <img className={css.feedbackHeaderImg} src={feedbackImg} alt="feedback" />
         <p className={css.feedbackHeaderText}>Ваші відгуки</p>
- 
       {reviews?.length > 0 && (
         <Swiper
           spaceBetween={30}
@@ -80,7 +83,14 @@ const Feedback: FC = () => {
           ))}
         </Swiper>
       )}
-      <button className={css.reviewButton}>Залишити свій відгук </button>
+        <button className={css.reviewButton}
+          onClick={() => modalShow()}
+        >Залишити відгук </button>
+        {isModalShow && (
+          <Modal
+            setModalHide={setIsModalShow}
+          />
+        )}
       </div>
     </>
   );
