@@ -8,10 +8,13 @@ import likeImg from "/like.png";
 import toolsImg from "/tools.png";
 import mobileImg from "/mobile.png";
 import Footer from "../Footer/Footer";
+import Video from "../Video/Video";
+import Header from "../Header/Header";
 
 const Hero: FC = () => {
   return (
     <>
+      <Header />
       <div className={`${css.hero} container`}>
         <div className={css.main_hero}>
           <iframe
@@ -48,6 +51,9 @@ const Hero: FC = () => {
         <Feedback />
 
         <PriceService />
+      </div>
+      <Video />
+      <div className={csss.container}>
         <Statistics />
       </div>
       <Footer />
