@@ -8,10 +8,12 @@ interface IModal {
   setModalHide: (newValue: boolean) => void;
 }
 
-const Modal = ({ setModalHide}: IModal): JSX.Element => {
+const Modal = ({ setModalHide }: IModal): JSX.Element => {
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", addKeyDown);
     return () => {
+      document.body.style.overflow = "";
       window.removeEventListener("keydown", addKeyDown);
     };
   });
@@ -30,7 +32,7 @@ const Modal = ({ setModalHide}: IModal): JSX.Element => {
 
   return createPortal(
     <div className={css.overlay} onClick={addOverlay}>
-          <NewFeedback setModalHide={ setModalHide} />
+      <NewFeedback setModalHide={setModalHide} />
     </div>,
     modalRoot as HTMLElement
   );

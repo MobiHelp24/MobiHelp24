@@ -9,6 +9,7 @@ import mobileImg from "/mobile.png";
 import Footer from "../Footer/Footer";
 import Video from "../Video/Video";
 import Header from "../Header/Header";
+import AboutUs from "../AboutUs/AboutUs";
 
 const Hero: FC = () => {
   return (
@@ -48,8 +49,8 @@ const Hero: FC = () => {
       </div>
       <div className="container">
         <Feedback />
-
         <PriceService />
+        <AboutUs />
       </div>
       <Video />
       <div className="container">
