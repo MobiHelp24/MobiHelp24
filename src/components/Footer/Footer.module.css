@@ -10,22 +10,28 @@
 
   margin-bottom: 1.5rem;
 }
-.logo_container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.7rem;
+.container_footer {
+  text-align: center;
 }
-.logo {
+
+.logo_container {
   font-family: "Nunito-Condensed";
-  display: inline-block;
-  font-size: 2.5rem;
-  letter-spacing: 0.05rem;
-  font-weight: 900;
-  padding: 0.1rem 0.8rem;
-  border-radius: 0.6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1.6rem;
   background-color: var(--blue);
   color: var(--white);
   border: 0.2rem solid var(--white);
+  margin-bottom: 0.7rem;
+}
+.logo {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+.logo_title {
+  font-size: 1rem;
 }
 .footer_info {
   display: flex;
@@ -112,6 +118,14 @@
   .footer_title {
     font-size: 1.2rem;
   }
+  .logo {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+  .logo_title {
+    font-size: 2rem;
+  }
+
   .social_media {
     flex-direction: unset;
     gap: 0.7rem;
@@ -126,13 +140,16 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
+  .logo_container {
+    padding: 0.6rem 1rem;
+    border: 0.4rem solid var(--white);
+  }
   .logo {
-    font-size: 2.4rem;
-    letter-spacing: 0.05rem;
-    font-weight: 900;
-    padding: 1rem 1.8rem;
-    border-radius: 1.6rem;
-    border: 0.5rem solid var(--white);
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+  }
+  .logo_title {
+    font-size: 2rem;
   }
   .footer_title {
     font-size: 1.5rem;

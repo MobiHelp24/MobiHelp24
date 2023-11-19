@@ -4,6 +4,7 @@ import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiInstagramLogoThin } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
+import logoPng from "/logo.png";
 
 const Footer: FC = () => {
   return (
@@ -13,7 +14,8 @@ const Footer: FC = () => {
       </h2>
       <div className={`${css.container_footer} container`}>
         <div className={css.logo_container}>
-          <span className={css.logo}>MobiHelp24</span>
+          <img src={logoPng} alt="logo" className={css.logo} />
+          <span className={css.logo_title}>MobiHelp24</span>
         </div>
         <div className={css.footer_info}>
           <div className={css.work_time}>

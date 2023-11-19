@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Hero from "./components/Hero/Hero";
-
 import { Route, Routes } from "react-router-dom";
 import AdminPage from "./components/Admin/AdminPage";
 

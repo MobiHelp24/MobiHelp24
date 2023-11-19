@@ -1,8 +1,8 @@
 import { FC } from "react";
-import csss from "../../App.module.css";
 import css from "./Hero.module.css";
+// import csss from "../../App.module.css";
 import Statistics from "../Statistics/Statistics";
-import Feedback from "../Feedback/Feedback";
+// import Feedback from "../Feedback/Feedback";
 import PriceService from "../PriceService/PriceService";
 import likeImg from "/like.png";
 import toolsImg from "/tools.png";
@@ -47,13 +47,13 @@ const Hero: FC = () => {
           </ul>
         </div>
       </div>
-      <div className={csss.container}>
-        <Feedback />
+      <div className="container">
+        {/* <Feedback /> */}
 
         <PriceService />
       </div>
       <Video />
-      <div className={csss.container}>
+      <div className="container">
         <Statistics />
       </div>
       <Footer />

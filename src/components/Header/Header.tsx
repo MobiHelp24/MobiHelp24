@@ -1,5 +1,7 @@
 import { FC } from "react";
 import css from "./Header.module.css";
+import logoPng from "/logo.png";
+import manHat from "/manf2.png";
 import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiInstagramLogoThin } from "react-icons/pi";
@@ -12,7 +14,8 @@ const Header: FC = () => {
         <div className={`${css.container_header} container`}>
           <div className={css.main_container}>
             <div className={css.logo_container}>
-              <span className={css.logo}>MobiHelp24</span>
+              <img src={logoPng} alt="logo" className={css.logo} />
+              <span className={css.logo_title}>MobiHelp24</span>
             </div>
 
             <div className={css.info}>
@@ -65,6 +68,9 @@ const Header: FC = () => {
             Швидко, якісно, краща ціна - ваш телефон у надійних руках
           </h1>
         </div>
+      </div>
+      <div className={css.manWithHat}>
+        <img src={manHat} alt="man" />
       </div>
     </header>
   );
