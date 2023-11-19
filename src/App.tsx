@@ -8,7 +8,10 @@ const App: FC = () => {
     <div>
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="222" element={<AdminPage />} />
+        <Route
+          path={`${import.meta.env.VITE_REACT_APP_ROUTE}`}
+          element={<AdminPage />}
+        />
       </Routes>
     </div>
   );

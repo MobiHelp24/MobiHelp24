@@ -73,13 +73,13 @@ img {
   color: var(--white) !important;
 }
 
-.btnOk{
+.btnOk {
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
   background-color: #2993d960;
 }
 
-.btnOk:hover{
+.btnOk:hover {
   background-color: var(--blue);
   color: var(--seasalt);
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
@@ -89,13 +89,13 @@ img {
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
 }
 
-.btnCancel{
+.btnCancel {
   padding: 0.3rem 0.6rem;
   border-radius: 0.3rem;
   background-color: #d21a1a82;
 }
 
-.btnCancel:hover{
+.btnCancel:hover {
   background-color: var(--red);
   color: var(--seasalt);
   box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
@@ -103,4 +103,17 @@ img {
 
 .btnCancel:active {
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.3);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: 84%;
+}
+.swiper {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 660px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 42%;
+  }
 }
