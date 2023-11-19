@@ -13,18 +13,12 @@
   left: 0;
   transform: 50% 50%;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(19, 19, 19, 0.9);
   overflow: hidden;
   animation: fadeIn 0.2s ease-in-out;
-  z-index: 20;
+  z-index: 690;
 }
-/* .modal_container {
-  border-radius: 4px;
-  overflow: hidden;
-  max-width: calc(90vw - 40px);
-  max-height: calc(90vh - 20px);
-} */
