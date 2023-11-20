@@ -1,11 +1,30 @@
 .footer {
+  margin-top: 2rem;
   padding: 1.7rem 0rem;
-  background-color: rgb(34, 56, 69);
+  /* background-color: #223845; */
+  background-image: linear-gradient(
+    0deg,
+    hsl(202deg 34% 20%) 0%,
+    hsl(201deg 49% 34%) 7%,
+    hsl(200deg 64% 47%) 14%,
+    hsl(198deg 79% 61%) 21%,
+    hsl(198deg 86% 69%) 29%,
+    hsl(197deg 83% 72%) 36%,
+    hsl(198deg 82% 76%) 43%,
+    hsl(197deg 80% 79%) 50%,
+    hsl(197deg 80% 82%) 57%,
+    hsl(197deg 82% 85%) 64%,
+    hsl(198deg 80% 88%) 71%,
+    hsl(198deg 82% 91%) 79%,
+    hsl(198deg 80% 94%) 86%,
+    hsl(200deg 86% 97%) 93%,
+    hsl(0deg 0% 100%) 100%
+  );
 }
 .main_footer_title {
   font-family: "Poiret";
   font-size: 1.2rem;
-  color: var(--white);
+  color: var(--black);
   text-align: center;
 
   margin-bottom: 1.5rem;
@@ -57,11 +76,11 @@
 .footer_title {
   font-weight: 700;
   font-size: 1rem;
-  color: var(--white);
+  color: var(--black);
 }
 .footer_icons {
   font-size: 1.8rem;
-  color: var(--blue);
+  color: var(--black);
 }
 .social_media {
   display: flex;
