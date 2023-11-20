@@ -6,6 +6,7 @@ import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiInstagramLogoThin } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
+import { SiViber } from "react-icons/si";
 
 const Header: FC = () => {
   return (
@@ -57,9 +58,10 @@ const Header: FC = () => {
                   <PiInstagramLogoThin className={css.social_media_icon} />
                 </a>
                 <a href="https://t.me/Benya2320" target="_blank">
-                  <BiLogoTelegram
-                    className={` ${css.social_media_icon_telegram}`}
-                  />
+                  <BiLogoTelegram className={css.social_media_icon_telegram} />
+                </a>
+                <a href="viber://chat?number=%2B380958269786" target="_blank">
+                  <SiViber className={css.social_media_icon_viber} />
                 </a>
               </div>
             </div>
