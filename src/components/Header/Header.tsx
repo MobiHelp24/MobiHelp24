@@ -14,9 +14,11 @@ const Header: FC = () => {
       <div className={css.header_background}>
         <div className={`${css.container_header} container`}>
           <div className={css.main_container}>
-            <div className={css.logo_container}>
-              <img src={logoPng} alt="logo" className={css.logo} />
-              <span className={css.logo_title}>MobiHelp24</span>
+            <div className={css.wrap_logo}>
+              <div className={css.logo_container}>
+                <img src={logoPng} alt="logo" className={css.logo} />
+                <span className={css.logo_title}>MobiHelp24</span>
+              </div>
             </div>
 
             <div className={css.info}>
@@ -60,7 +62,7 @@ const Header: FC = () => {
                 <a href="https://t.me/Benya2320" target="_blank">
                   <BiLogoTelegram className={css.social_media_icon_telegram} />
                 </a>
-                <a href="viber://chat?number=%2B380958269786" target="_blank">
+                <a href="viber://chat?number=%2B380958269769" target="_blank">
                   <SiViber className={css.social_media_icon_viber} />
                 </a>
               </div>

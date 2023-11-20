@@ -32,12 +32,7 @@
   );
 }
 .main_title {
-  width: 74%;
-  font-family: "Unbounded";
-  font-size: 0.8rem;
-  /* margin-top: 0.3rem; */
-  color: var(--white);
-  z-index: 40;
+  display: none;
 }
 .logo_container {
   font-family: "Nunito-Condensed";
@@ -52,12 +47,12 @@
 }
 .header_title {
   font-weight: 700;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--main-text-color);
 }
 
 .header_icons {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: var(--white);
 }
 
@@ -66,12 +61,17 @@
   column-gap: 0.3rem;
 }
 .main_container {
-  width: 67%;
+  width: 90%;
   display: flex;
   margin-left: 6%;
   flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
   z-index: 40;
+}
+.wrap_logo {
+  margin-left: auto;
+  margin-right: 17%;
 }
 .logo {
   max-width: 1.7rem;
@@ -100,7 +100,7 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  margin-top: 0.4rem;
+  /* margin-top: 0.4rem; */
 }
 .phone {
   display: flex;
@@ -111,7 +111,7 @@
 }
 .social_media {
   display: flex;
-  margin-top: 0.3rem;
+  margin-top: 0.7rem;
   justify-content: center;
   gap: 1rem;
 }
@@ -159,36 +159,67 @@
   border: none;
 }
 @media screen and (min-width: 360px) {
-  .main_title {
-    font-size: 1rem;
-  }
-}
-@media screen and (min-width: 375px) {
   .header_title {
     font-size: 0.7rem;
   }
 }
-@media screen and (min-width: 380px) {
-  .container_header {
-    padding-top: 2.3rem;
+@media screen and (min-width: 375px) {
+  .header_title {
+    font-size: 0.9rem;
+  }
+  .main_container {
+    width: 90%;
+
+    margin-top: 1.3rem;
+  }
+  .info_other {
+    margin-top: 1.5rem;
+  }
+  .social_media {
+    margin-top: 1rem;
+  }
+  .header_icons {
+    font-size: 1rem;
+  }
+  .social_media_icon,
+  .social_media_icon_telegram,
+  .social_media_icon_viber {
+    font-size: 2.4rem;
   }
 }
-@media screen and (min-width: 455px) {
+
+@media screen and (min-width: 425px) {
   .main_title {
     font-size: 1.3rem;
     margin-top: 0.5rem;
   }
-  .logo_container {
-    padding: 0.5rem 1rem;
+  .logo_title {
+    font-size: 1.2rem;
   }
   .header_title {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .social_media {
     margin-top: 0.8rem;
   }
+  .logo {
+    max-width: 2rem;
+    max-height: 2rem;
+  }
+  .info_other {
+    gap: 0.7rem;
+  }
+  .social_media_icon,
+  .social_media_icon_telegram,
+  .social_media_icon_viber {
+    font-size: 3rem;
+  }
 }
 @media screen and (min-width: 510px) {
+  .main_container {
+    width: 74%;
+    margin-top: 2rem;
+  }
   .logo_title {
     font-size: 1.4rem;
   }
@@ -203,6 +234,17 @@
   .social_media {
     margin-top: 1.2rem;
     gap: 1.7rem;
+  }
+  .main_title {
+    display: flex;
+    width: 90%;
+    font-family: "Unbounded";
+    font-size: 1.2rem;
+    color: var(--white);
+    z-index: 40;
+  }
+  .info_other {
+    margin-top: 0.2rem;
   }
 }
 
