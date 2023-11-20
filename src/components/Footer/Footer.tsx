@@ -4,7 +4,7 @@ import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiInstagramLogoThin } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
-import logoPng from "/logo.png";
+import logoPng from "/logo2.png";
 
 const Footer: FC = () => {
   return (

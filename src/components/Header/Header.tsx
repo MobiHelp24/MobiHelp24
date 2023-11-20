@@ -1,6 +1,6 @@
 import { FC } from "react";
 import css from "./Header.module.css";
-import logoPng from "/logo.png";
+import logoPng from "/logo2.png";
 import manHat from "/manf2.png";
 import { MdAccessTime } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";

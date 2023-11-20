@@ -1,5 +1,6 @@
 import { FC } from "react";
 import css from "./AboutUs.module.css";
+// import phones from "/phones.png";
 import { MdOutlinePhonelinkSetup } from "react-icons/md";
 import { GiButtonFinger, GiCharging } from "react-icons/gi";
 import { IoBatteryCharging, IoWaterOutline } from "react-icons/io5";
@@ -55,15 +56,37 @@ const AboutUs: FC = () => {
     <div className={css.about}>
       <h2 className={css.about_main_title}>Чим ми займаємося</h2>
       <ul>
-        {whatWeDo.map(({ title, description, icon, id }) => (
-          <li className={css.item_li}>
-            <div className={id < 4 ? `${css.list_div}` : `${css.list_div2}`}>
-              <span>{title}</span>
-              {icon}
-            </div>
-            <p className={`${css.description}`}>{description}</p>
-          </li>
-        ))}
+        {whatWeDo.map(({ title, description, icon, id }) =>
+          id < 4 ? (
+            <li key={id} className={css.item_li}>
+              <div className={css.list_div}>
+                <span>{title}</span>
+                {icon}
+              </div>
+              <p className={css.description}>{description}</p>
+            </li>
+          ) : (
+            ""
+          )
+        )}
+      </ul>
+      {/* <div>
+        <img src={phones} alt="phones" />
+      </div> */}
+      <ul>
+        {whatWeDo.map(({ title, description, icon, id }) =>
+          id > 3 ? (
+            <li key={id} className={css.item_li}>
+              <div className={css.list_div2}>
+                <span>{title}</span>
+                {icon}
+              </div>
+              <p className={css.description2}>{description}</p>
+            </li>
+          ) : (
+            ""
+          )
+        )}
       </ul>
     </div>
   );
