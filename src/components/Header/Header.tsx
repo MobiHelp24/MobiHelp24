@@ -26,7 +26,7 @@ const Header: FC = () => {
                 <div>
                   <div className={css.work_time}>
                     <MdAccessTime className={css.header_icons} />
-                    <span className={css.header_title}>ПН-ПТ 8:00 - 17:00</span>
+                    <span className={css.header_title}>ПН-ПТ 8:00-17:00</span>
                   </div>
 
                   <div className={css.contacts}>
@@ -45,10 +45,10 @@ const Header: FC = () => {
                   <span className={css.header_title}>Телефон</span>
 
                   <a href="tel:+380958269769" className={css.header_title}>
-                    +38 (095) 826-97-69
+                    +380958269769
                   </a>
                   <a href="tel:+380996660769" className={css.header_title}>
-                    +38 (099) 666-07-69
+                    +380996660769
                   </a>
                 </div>
               </div>
