@@ -5,6 +5,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { PiInstagramLogoThin } from "react-icons/pi";
 import { BiLogoTelegram } from "react-icons/bi";
 import logoPng from "/logo2.png";
+import { SiViber } from "react-icons/si";
 
 const Footer: FC = () => {
   return (
@@ -42,6 +43,9 @@ const Footer: FC = () => {
               <BiLogoTelegram
                 className={` ${css.social_media_icon_telegram}`}
               />
+            </a>
+            <a href="viber://chat?number=%2B380958269769" target="_blank">
+              <SiViber className={css.social_media_icon_viber} />
             </a>
           </div>
         </div>

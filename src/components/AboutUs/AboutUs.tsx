@@ -74,7 +74,7 @@ const AboutUs: FC = () => {
           )}
         </ul>
         <div className={css.phone_container}>
-          <img className={css.phone} src={phones} alt="phones" />
+          <img className={css.phone} src={phones} alt="phones" loading="lazy" />
         </div>
         <ul className={css.list_container2}>
           {whatWeDo.map(({ title, description, icon, id }) =>

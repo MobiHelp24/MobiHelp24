@@ -16,7 +16,12 @@ const Header: FC = () => {
           <div className={css.main_container}>
             <div className={css.wrap_logo}>
               <div className={css.logo_container}>
-                <img src={logoPng} alt="logo" className={css.logo} />
+                <img
+                  src={logoPng}
+                  alt="logo"
+                  className={css.logo}
+                  loading="lazy"
+                />
                 <span className={css.logo_title}>MobiHelp24</span>
               </div>
             </div>
@@ -74,7 +79,7 @@ const Header: FC = () => {
         </div>
       </div>
       <div className={css.manWithHat}>
-        <img src={manHat} alt="man" />
+        <img src={manHat} alt="man" loading="lazy" />
       </div>
     </header>
   );

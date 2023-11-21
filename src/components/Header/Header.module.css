@@ -47,7 +47,7 @@
 }
 .header_title {
   font-weight: 700;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   color: var(--main-text-color);
 }
 
@@ -61,18 +61,14 @@
   column-gap: 0.3rem;
 }
 .main_container {
-  width: 90%;
+  width: 60%;
   display: flex;
-  margin-left: 6%;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   z-index: 40;
 }
-.wrap_logo {
-  margin-left: auto;
-  margin-right: 17%;
-}
+
 .logo {
   max-width: 1.7rem;
   max-height: 1.7rem;
@@ -82,10 +78,11 @@
 }
 .info_other {
   display: flex;
-  align-items: flex-end;
-  /* margin-top: 0.5rem; */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  margin-top: 0.5rem;
+  justify-content: center;
 }
 .work_time {
   display: flex;
@@ -98,9 +95,7 @@
   gap: 0.5rem;
 }
 .contacts {
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 0.4rem; */
+  display: none;
 }
 .phone {
   display: flex;
@@ -158,22 +153,17 @@
   box-shadow: 0px 0px 8px 2px rgba(38, 40, 42, 0.55);
   border: none;
 }
-@media screen and (min-width: 360px) {
-  .header_title {
-    font-size: 0.7rem;
-  }
-}
 @media screen and (min-width: 375px) {
   .header_title {
     font-size: 0.9rem;
   }
   .main_container {
-    width: 90%;
+    width: 66%;
 
     margin-top: 1.3rem;
   }
   .info_other {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
   }
   .social_media {
     margin-top: 1rem;
@@ -200,19 +190,21 @@
     font-size: 1rem;
   }
   .social_media {
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
   }
   .logo {
     max-width: 2rem;
     max-height: 2rem;
   }
-  .info_other {
-    gap: 0.7rem;
+  .contacts {
+    display: flex;
+    flex-direction: column;
   }
+
   .social_media_icon,
   .social_media_icon_telegram,
   .social_media_icon_viber {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 @media screen and (min-width: 510px) {
@@ -223,8 +215,19 @@
   .logo_title {
     font-size: 1.4rem;
   }
+  .info_other {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
   .header_icons {
     font-size: 1.2rem;
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
   }
   .social_media_icon,
   .social_media_icon_telegram,
@@ -243,18 +246,12 @@
     color: var(--white);
     z-index: 40;
   }
-  .info_other {
-    margin-top: 0.2rem;
-  }
 }
 
 @media screen and (min-width: 600px) {
-  .info {
-    margin-top: 1rem;
-  }
   .main_title {
     font-size: 1.7rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
   .header_title {
     font-size: 1rem;
@@ -274,12 +271,10 @@
   .header_title {
     font-size: 1.2rem;
   }
-  .info {
-    margin-top: 1rem;
-  }
+
   .main_title {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
   .social_media_icon,
   .social_media_icon_telegram,
@@ -287,7 +282,6 @@
     font-size: 3.5rem;
   }
   .social_media {
-    margin-top: 1.7rem;
     gap: 2.5rem;
   }
   .logo_container {
@@ -311,6 +305,13 @@
   .info {
     margin-top: 1rem;
   }
+  .info_other {
+    gap: 2.5rem;
+  }
+  .logo_container {
+    border: 0.4rem solid var(--white);
+    padding: 0.4rem 1.4rem;
+  }
 }
 @media screen and (min-width: 900px) {
   .main_title {
@@ -327,7 +328,7 @@
     gap: 3rem;
   }
   .info {
-    margin-top: 1.3rem;
+    margin-top: 0.3rem;
   }
   .logo_title {
     font-size: 2rem;
@@ -337,10 +338,13 @@
     max-height: 4rem;
     margin-right: 0.6rem;
   }
+  .logo_container {
+    padding: 0.6rem 1.7rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   .container_header {
-    padding-top: 6rem;
+    padding-top: 5rem;
   }
 
   .logo_container {
@@ -353,11 +357,14 @@
   .social_media_icon_viber {
     padding: 0.5rem;
   }
+  .header_title {
+    font-size: 2rem;
+  }
+  .header_icons {
+    font-size: 2rem;
+  }
 }
 @media screen and (min-width: 1100px) {
-  .header_title {
-    font-size: 1.5rem;
-  }
   .header_icons {
     font-size: 2.5rem;
   }
@@ -402,6 +409,9 @@
   .info {
     margin-top: 1.7rem;
   }
+  .info_other {
+    gap: 4rem;
+  }
   .logo_title {
     font-size: 2.5rem;
   }
@@ -419,13 +429,14 @@
 }
 @media screen and (min-width: 1300px) {
   .main_title {
+    width: 99%;
     font-size: 3.4rem;
     margin-top: 2rem;
   }
 }
 @media screen and (min-width: 1400px) {
   .container_header {
-    padding-top: 10rem;
+    padding-top: 9rem;
   }
 
   .manWithHat {
@@ -433,7 +444,7 @@
     margin-left: 0px;
   }
   .main_title {
-    width: 84%;
+    width: 90%;
     font-size: 3.7rem;
   }
   .social_media_icon,
@@ -481,7 +492,7 @@
     margin-left: 0px;
   }
   .main_title {
-    width: 101%;
+    width: 100%;
     font-size: 4.3rem;
     margin-top: 2.5rem;
   }
@@ -517,7 +528,6 @@
 }
 @media screen and (min-width: 1800px) {
   .main_title {
-    font-size: 4.5rem;
     margin-top: 2rem;
   }
   .manWithHat {
