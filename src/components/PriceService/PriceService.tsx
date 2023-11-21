@@ -84,37 +84,39 @@ const PriceService: FC = () => {
 
   return (
     <>
-      <h2 className={css.feedback}>Послуги</h2>
-      <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 220 }} aria-label="table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>
-                <Typography variant="body1" fontWeight="bold">
-                  Назва послуги
-                </Typography>
-              </StyledTableCell>
-              <StyledTableCell align="right">
-                <Typography variant="body1" fontWeight="bold">
-                  Вартість
-                </Typography>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.description}>
-                <StyledTableCell component="th" scope="row">
-                  {row.description}
+      <div className={css.feedback_container}>
+        <h2 className={css.feedback}>Послуги</h2>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 220 }} aria-label="table">
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>
+                  <Typography variant="body1" fontWeight="bold">
+                    Назва послуги
+                  </Typography>
                 </StyledTableCell>
                 <StyledTableCell align="right">
-                  {row.price + " грн."}
+                  <Typography variant="body1" fontWeight="bold">
+                    Вартість
+                  </Typography>
                 </StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.description}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.description}
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    {row.price + " грн."}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </>
   );
 };

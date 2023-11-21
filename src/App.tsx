@@ -2,6 +2,7 @@ import { FC } from "react";
 import Hero from "./components/Hero/Hero";
 import { Route, Routes } from "react-router-dom";
 import AdminPage from "./components/Admin/AdminPage";
+import ButtonScrollUp from "./components/ButtonScrollUp/ButtonScrollUp";
 
 const App: FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: FC = () => {
           element={<AdminPage />}
         />
       </Routes>
+      <ButtonScrollUp />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .about {
-  margin: 4rem 0rem;
+  margin: 4rem 1rem;
 }
 .about_main_title {
   display: flex;
@@ -54,10 +54,24 @@
 .phone_container {
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
+
 .phone {
   max-height: 20%;
+}
+.phone_title {
+  font-size: 1rem;
+  text-align: center;
+}
+.phone_siute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-top: 2rem;
 }
 @media screen and (min-width: 760px) {
   .about_container {
@@ -65,10 +79,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
   }
-  .phone_container {
-    align-items: center;
-    padding: 0rem;
-  }
+
   .item_li {
     padding: 0rem;
   }
@@ -88,10 +99,13 @@
 }
 
 @media screen and (min-width: 1000px) {
-  .phone_container {
-    align-items: flex-start;
-    padding: 0rem;
-  }
+  /* .phone_siute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  } */
   .phone {
     min-height: 330px;
   }

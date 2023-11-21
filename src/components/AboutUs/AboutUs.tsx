@@ -5,6 +5,7 @@ import { MdOutlinePhonelinkSetup } from "react-icons/md";
 import { GiButtonFinger, GiCharging } from "react-icons/gi";
 import { IoBatteryCharging, IoWaterOutline } from "react-icons/io5";
 import { IoMdMic } from "react-icons/io";
+import { MdOutlineWeb } from "react-icons/md";
 
 const whatWeDo = [
   {
@@ -75,6 +76,15 @@ const AboutUs: FC = () => {
         </ul>
         <div className={css.phone_container}>
           <img className={css.phone} src={phones} alt="phones" loading="lazy" />
+
+          <span className={`${css.phone_siute}`}>
+            <MdOutlineWeb size="2rem" color="red" />
+            <strong>Розробка сайтів</strong>
+            <p className={css.phone_title}>
+              Створюємо індивідуальні та ефективні веб-сайти з унікальним
+              дизайном та функціоналом.
+            </p>
+          </span>
         </div>
         <ul className={css.list_container2}>
           {whatWeDo.map(({ title, description, icon, id }) =>
