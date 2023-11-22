@@ -109,7 +109,7 @@ const PriceService: FC = () => {
                     {row.description}
                   </StyledTableCell>
                   <StyledTableCell align="right">
-                    {row.price + " грн."}
+                    {Math.ceil(row.price) + " грн."}
                   </StyledTableCell>
                 </StyledTableRow>
               ))}
